@@ -8,8 +8,7 @@ def home(request):
 
 	try:
 		api = json.loads(api_request.content)
-		api_t = json.loads(api_request.content)
-		loc = api_t['location']['localtime']
+		loc = api['location']['localtime']
 		time = loc[10:]
 
 	except Exception as e:
